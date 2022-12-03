@@ -16,8 +16,9 @@ class Room:
     def playlist_length(self):
         return len(self.playlist)
 
-    def add_songs_to_playlist(self, song):
-        self.playlist.append(song)        
+    def add_songs_to_playlist(self, new_song):
+        if new_song not in self.playlist:
+            self.playlist.append(new_song)        
      
     def remove_songs_from_playlist(self, song):
         self.playlist.remove(song)        
